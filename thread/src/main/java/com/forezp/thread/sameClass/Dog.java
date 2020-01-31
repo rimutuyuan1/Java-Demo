@@ -1,4 +1,4 @@
-package com.forezp.thread;
+package com.forezp.thread.sameClass;
 
 public class Dog {
 

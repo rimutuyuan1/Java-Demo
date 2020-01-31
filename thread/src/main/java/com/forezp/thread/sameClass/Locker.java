@@ -1,4 +1,4 @@
-package com.forezp.thread;
+package com.forezp.thread.sameClass;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
