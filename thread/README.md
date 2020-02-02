@@ -54,6 +54,10 @@ Synchronized 同步锁
 
 volatile、synchronized、lock能保证有序性
 
+happens-before原则
+
+
+
 
 
 
