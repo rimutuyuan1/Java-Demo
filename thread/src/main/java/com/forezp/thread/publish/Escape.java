@@ -2,7 +2,14 @@ package com.forezp.thread.publish;
 
 import com.forezp.thread.annoations.NotRecommend;
 import com.forezp.thread.annoations.NotThreadSafe;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Collections;
+import java.util.Map;
 
 
 /**
@@ -22,6 +29,25 @@ public class Escape {
 
     private int thisCanBeEscape = 0;
 
+    private static Map<Integer,Integer> map = Maps.newHashMap();
+
+    private final static ImmutableList list = ImmutableList.of(1, 1, 2, 3);
+
+    private final static ImmutableSet set = ImmutableSet.copyOf(list);
+
+    private final static ImmutableMap<Integer, Integer> immutableMap = ImmutableMap.<Integer, Integer>builder()
+            .put(1, 2)
+            .put(2, 4)
+            .put(3, 6)
+            .build();
+
+    static {
+        map.put(1, 2);
+        map.put(2, 4);
+        map.put(3, 5);
+        map = Collections.unmodifiableMap(map);
+    }
+
     public Escape () {
         new InnerClass();
     }
@@ -34,6 +60,6 @@ public class Escape {
     }
 
     public static void main(String[] args) {
-        new Escape();
+        log.info("{}", set);
     }
 }
