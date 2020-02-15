@@ -1,27 +1,22 @@
 package com.forezp.thread;
 
-import com.forezp.thread.sameClass.Dog;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Repository
 @SpringBootApplication
 public class ThreadApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ThreadApplication.class, args);
-
-        Dog dog = new Dog() {
-            @Override
-            public String say() {
-                return "hello cat";
-            }
-        };
-        System.out.println(dog.say());
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时mm分ss秒");
+        String format = localDateTime.format(dtf);
+        System.out.println(format);
     }
 
-    Dog.Cat cat = new Dog.Cat();
 
 
 }
