@@ -11,7 +11,10 @@ public class testController {
 
     @GetMapping(value = "/data")
     public String getData(DestData destData) {
+        System.gc();
         return destData.getName();
     }
+
+
 
 }
