@@ -5,16 +5,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping(value = "/test")
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class testController {
 
-    @GetMapping(value = "/data")
-    public String getData(DestData destData) {
-        System.gc();
-        return destData.getName();
+    public  static void main(String[] args) throws InterruptedException {
+
+        testController ttt = new testController();
+
+        synchronized (ttt){
+            ttt.wait();
+        }
     }
-
-
 
 }
