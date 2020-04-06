@@ -21,6 +21,9 @@
     <modules>
         <module>eureka-server</module>
         <module>service-hi</module>
+        <module>tsdb</module>
+        <module>guava</module>
+        <module>guava</module>
     </modules>
 
     <properties>

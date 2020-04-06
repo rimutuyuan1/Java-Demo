@@ -8,7 +8,7 @@ public class esController {
     @Autowired
     ElasticsearchRestTemplate elRestTemplate;
 
-    public String name() {
+    public void name() {
         System.out.println("你好");
     }
 }
