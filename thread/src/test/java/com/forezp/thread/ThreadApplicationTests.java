@@ -1,13 +1,22 @@
 package com.forezp.thread;
 
-import org.junit.jupiter.api.Test;
+import com.forezp.thread.ioc.user;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
-class ThreadApplicationTests {
+@RunWith(SpringRunner.class)
+public class ThreadApplicationTests {
+
+    @Autowired
+    user user;
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+        System.out.println(user.queryName());
     }
 
 }

@@ -21,9 +21,10 @@
     <modules>
         <module>eureka-server</module>
         <module>service-hi</module>
-        <module>tsdb</module>
-        <module>guava</module>
-        <module>guava</module>
+        <module>service-feign</module>
+        <module>service-ribbon</module>
+        <module>service-zuul</module>
+        <module>thread</module>
     </modules>
 
     <properties>
