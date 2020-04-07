@@ -6,7 +6,7 @@ public class FileService {
 
     private static final String FilePath = "/Users/rimutuyuan/Desktop";
 
-    private void FileHandle(String path, FileHandleInterface handleInterface) throws IOException {
+    private static void FileHandle(String path, FileHandleInterface handleInterface) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                         new FileInputStream(new File(path))));
 
@@ -20,7 +20,6 @@ public class FileService {
     }
 
     public static void main(String[] args) throws IOException {
-        FileService fileService = new FileService();
-        fileService.FileHandle(FilePath + "/hi.txt", System.out::println);
+        FileHandle(FilePath + "/hi.txt", System.out::println);
     }
 }
