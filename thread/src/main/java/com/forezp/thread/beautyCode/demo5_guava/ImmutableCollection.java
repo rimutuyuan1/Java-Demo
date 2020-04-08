@@ -19,9 +19,9 @@ public class ImmutableCollection {
         list.add(2);
         list.add(3);
         list.add(3);
-        ImmutableSet immutableSet = ImmutableSet.copyOf(list);
         ImmutableSet set = ImmutableSet.of(1, 2, 3);
         ImmutableMap map = ImmutableMap.of(1, 3, 2, 4);
+        ImmutableSet immutableSet = ImmutableSet.copyOf(list);
         ImmutableSet immutableSets = ImmutableSet.builder().add("4","5","6").build();
         System.out.println(set);
         System.out.println(map);

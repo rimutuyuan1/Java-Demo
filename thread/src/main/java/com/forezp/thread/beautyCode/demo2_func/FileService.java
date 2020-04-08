@@ -20,6 +20,9 @@ public class FileService {
     }
 
     public static void main(String[] args) throws IOException {
+        String a = "1";
+        String b = "2";
+        a.equals(b);
         FileHandle(FilePath + "/hi.txt", System.out::println);
     }
 }
