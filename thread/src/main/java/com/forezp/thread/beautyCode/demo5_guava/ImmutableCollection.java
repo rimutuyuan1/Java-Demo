@@ -1,6 +1,7 @@
 package com.forezp.thread.beautyCode.demo5_guava;
 
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 
@@ -13,7 +14,7 @@ public class ImmutableCollection {
     // copyOf 从现有的集合中拷贝    of初始值创建    builder构造器创建
 
     private static void immutable() {
-        List list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -26,6 +27,7 @@ public class ImmutableCollection {
         System.out.println(map);
         System.out.println(immutableSet);
         System.out.println(immutableSets);
+        Preconditions.checkArgument(list.get(0) == 2, "数值必须为2");
     }
 
     public static void main(String[] args) {
