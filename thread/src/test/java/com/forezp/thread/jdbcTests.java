@@ -1,23 +1,22 @@
 package com.forezp.thread;
 
-import com.forezp.thread.jdbc.StringTest;
+import com.forezp.thread.jdbc.JdbcTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class jdbcTest {
+public class jdbcTests {
 
     @Autowired
-    private StringTest stringTest;
+    private JdbcTest stringTest;
 
     @Test
     public void jdbcTest() {
-        stringTest.jdbcTest("王鑫涛", "20");
+        stringTest.jdbcTest("王鑫涛", "25");
     }
 }
