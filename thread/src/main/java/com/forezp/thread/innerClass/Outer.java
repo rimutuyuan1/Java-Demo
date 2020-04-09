@@ -4,7 +4,7 @@ package com.forezp.thread.innerClass;
  *  非静态内部类
  *
  * */
-public class Outer {
+class Outer {
 
     private int a = 10;
     private static int q = 20;
