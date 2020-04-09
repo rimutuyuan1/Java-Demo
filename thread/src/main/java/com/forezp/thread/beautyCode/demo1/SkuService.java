@@ -39,8 +39,7 @@ public class SkuService {
     }
 
     public static void main(String[] args) {
-        List<Sku> skus = filterSkus(skuList, o -> o.getType().equals(SkuEnum.BOOK.getType()));
-
+        List<Sku> skus = filterSkus(skuList, sku -> sku.getType().equals(SkuEnum.BOOK.getType()));
         System.out.println(JSON.toJSONString(skus, true));
     }
 }

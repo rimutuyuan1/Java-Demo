@@ -19,5 +19,6 @@ public class Test {
 
     public static void main(String[] args) {
         new Test().new Inner().show();
+        new Outer().new Inner().printInfo(5);
     }
 }

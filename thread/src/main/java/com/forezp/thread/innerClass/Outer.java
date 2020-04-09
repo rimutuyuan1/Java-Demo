@@ -16,7 +16,7 @@ public class Outer {
         System.out.println("Inner Call");  // 必须要创建非静态内部类的实例进而调用该实例的成员。
     }
 
-    private class Inner {
+    class Inner {
 
         private int b = 5;
         //private static int c = 6; 非静态内部类不能创建静态变量、静态块、静态方法
