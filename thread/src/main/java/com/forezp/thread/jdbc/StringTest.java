@@ -9,6 +9,6 @@ public class StringTest {
     private JdbcTemplate jdbcTemplate;
 
     public void jdbcTest(String name, String age) {
-        jdbcTemplate.update("INSERT INTO USER VALUES (null,?,?)", name, age);
+        jdbcTemplate.update("INSERT INTO USER VALUES (?,?)", name, age);
     }
 }
