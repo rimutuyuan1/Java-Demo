@@ -4,12 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
-public class ReentrantLock {
+public class ReentrantLockTest {
 
     private static int count = 0;
-    private final static java.util.concurrent.locks.ReentrantLock lock = new java.util.concurrent.locks.ReentrantLock();
+    private final static ReentrantLock lock = new ReentrantLock();
     private static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     private static void incr() {
@@ -20,7 +21,7 @@ public class ReentrantLock {
 
     private static void thread() {
         for (int request = 0; request < 100; request++) {
-            executorService.execute(ReentrantLock::incr);
+            executorService.execute(ReentrantLockTest::incr);
         }
         System.out.printf("count ++ : %s\n", count);
     }
