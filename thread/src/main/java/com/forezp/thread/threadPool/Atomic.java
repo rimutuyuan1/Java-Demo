@@ -19,6 +19,7 @@ public class Atomic {
             executorService.execute(Atomic::incr);
         }
         System.out.println(count.get());
+        executorService.shutdown();
     }
 
     public static void main(String[] args) {
