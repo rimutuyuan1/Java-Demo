@@ -8,7 +8,7 @@ public class SingletonByCAS {
 
     private SingletonByCAS () {}
 
-    public static final SingletonByCAS getInstance() {
+    public static SingletonByCAS getInstance() {
         for (;;) {
             SingletonByCAS current = singleton.get();
             if (current != null) {
