@@ -2,6 +2,8 @@ package com.forezp.thread.singleton;
 
 class SingletonTest {
 
+    // 单例模式  --> 不能用构造方法去构造实例对象  只能通过类的静态方法 在程序启动的时候在类的内部创造一个全局唯一的实例 getInstance()
+
     // 单例模式下 构造方法使用private禁止外部new SingletonTest()来确保全局只有一个singletonTest实例
     // line15  双检锁第一个if判断  可以省略 但是如果省略效率会降低
     // 因为第一个判断去掉之后 无论singletonTest是否已经被实例化 都会走synchronized(line17) -> 加锁严重消耗性能

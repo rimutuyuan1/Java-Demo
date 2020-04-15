@@ -8,7 +8,7 @@ public class SingletonByCAS {
 
     private SingletonByCAS () {}
 
-    public static SingletonByCAS getInstance() {
+    static SingletonByCAS getInstance() {
         for (;;) {
             SingletonByCAS current = singleton.get();
             if (current != null) {
@@ -19,12 +19,6 @@ public class SingletonByCAS {
                 return current;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        SingletonByCAS singletonByCAS = SingletonByCAS.getInstance();
-        SingletonByCAS singletonByCAS1 = SingletonByCAS.getInstance();
-        System.out.println(singletonByCAS.equals(singletonByCAS1));
     }
 
 }
