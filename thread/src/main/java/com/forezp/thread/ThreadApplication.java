@@ -33,8 +33,7 @@ public class ThreadApplication extends SpringBootServletInitializer implements C
         String[] beans = appContext.getBeanDefinitionNames();
         Arrays.sort(beans);
         System.out.println("get all springboot beans :");
-        for (String bean : beans)
-        {
+        for (String bean : beans) {
             System.out.println(bean + "  -------->  " + appContext.getBean(bean).getClass());
         }
     }
