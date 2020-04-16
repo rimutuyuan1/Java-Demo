@@ -8,7 +8,7 @@ public class SingletonTestTest {
     public static void main(String[] args) {
         SingletonTest singletonTest = SingletonTest.getInstance();
         SingletonTest singletonTest1 = SingletonTest.getInstance();
-        System.out.println("singletonTest res : " + singletonTest.equals(singletonTest1));
+        System.out.println("SingletonTest res : " + singletonTest.equals(singletonTest1));
 
         SingletonByCAS singletonByCAS = SingletonByCAS.getInstance();
         SingletonByCAS singletonByCAS1 = SingletonByCAS.getInstance();
@@ -19,7 +19,7 @@ public class SingletonTestTest {
         System.out.println("SingletonByThreadLocal res : " + s1.equals(s2));
 
         // 结果：
-        //singletonTest res : true
+        //SingletonTest res : true
         //SingletonByCAS res : true
         //SingletonByThreadLocal res : true
     }
