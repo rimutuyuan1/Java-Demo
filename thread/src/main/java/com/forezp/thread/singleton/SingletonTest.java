@@ -1,5 +1,8 @@
 package com.forezp.thread.singleton;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SingletonTest {
 
     // 单例模式  --> 不能用构造方法去构造实例对象  只能通过类的静态方法 在程序启动的时候在类的内部创造一个全局唯一的实例 getInstance()

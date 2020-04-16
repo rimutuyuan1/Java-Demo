@@ -16,10 +16,8 @@ import java.util.Arrays;
 @SpringBootApplication
 public class ThreadApplication extends SpringBootServletInitializer implements CommandLineRunner {
 
-    static {
-        SingletonTest singletonTest = SingletonTest.getInstance();
-        SingletonTest singletonTest1 = SingletonTest.getInstance();
-    }
+    @Autowired
+    private SingletonTest singletonTest;
 
     @Autowired
     private ApplicationContext appContext;
