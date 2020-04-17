@@ -1,11 +1,13 @@
 package com.forezp.thread.atomicAndOther;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-@Slf4j
 public class atomicReference {
+
+    private static final Logger log = LoggerFactory.getLogger(AtomicReference.class);
 
     private static AtomicReference<Integer> count = new AtomicReference<>(0);
 
