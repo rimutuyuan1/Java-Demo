@@ -18,7 +18,7 @@ class Outer {
 
     class Inner {
 
-        private int b = 5;
+        private final int b = 5;
         //private static int c = 6; 非静态内部类不能创建静态变量、静态块、静态方法
 
         public void printInfo(int a) {
