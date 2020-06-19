@@ -40,5 +40,6 @@ public class PrintByAtomicIntegerTest {
 
     public static void main(String[] args) {
         printAB();
+        int i = 1;
     }
 }
