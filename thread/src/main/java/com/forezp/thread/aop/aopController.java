@@ -31,7 +31,7 @@ public class aopController {
         System.out.println("约基奇上场打球了！！");
     }
 
-    @IgnoreLog
+    @ParamLog
     @RequestMapping(value = "/Durant/{point}")
     public void Durant(@PathVariable("point") int point){
         System.out.println("杜兰特上场打球了！！");

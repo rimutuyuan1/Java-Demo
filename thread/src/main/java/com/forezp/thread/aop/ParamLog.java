@@ -13,5 +13,5 @@ import java.lang.annotation.Target;
  **/
 @Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IgnoreLog {
+public @interface ParamLog {
 }

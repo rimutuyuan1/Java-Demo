@@ -44,7 +44,7 @@ public class GameDataAspect {
             Method method = signature.getMethod();
             logger.info("around Method is {}", method);
             Class<?> clazz = method.getDeclaringClass();
-            boolean isIgnoreLog = clazz.isAnnotationPresent(IgnoreLog.class);
+            boolean isIgnoreLog = clazz.isAnnotationPresent(ParamLog.class);
             if (!isIgnoreLog) {
                 logger.info("this method be used the annotation : 【IgnoreLog】");
             }
