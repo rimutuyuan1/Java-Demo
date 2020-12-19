@@ -48,7 +48,7 @@ public class jdbcTests {
         list.forEach(o -> {
             try {
                 CompletableFutureTest.Student student = new CompletableFutureTest.Student();
-                student.setName(CompletableFuture.supplyAsync(() -> futureTest.buildName("zhangsan")).get());
+                student.setName(CompletableFuture.supplyAsync(() -> futureTest.buildName(o)).get());
                 student.setSex(CompletableFuture.supplyAsync(() -> futureTest.buildSex("男")).get());
                 student.setAge(CompletableFuture.supplyAsync(() -> futureTest.buildAge("18")).get());
                 map.put(o, student);
