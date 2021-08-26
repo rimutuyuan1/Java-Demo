@@ -10,8 +10,6 @@ import java.io.InputStream;
 public class ClassEqualTest {
 
     public static void main(String[] args) throws Exception {
-        // 一个简单的类加载器，逆向双亲委派机制
-        // 可以加载与自己在同一路径下的Class文件
         ClassLoader myClassLoader = new ClassLoader() {
             @Override
             public Class<?> loadClass(String name)
