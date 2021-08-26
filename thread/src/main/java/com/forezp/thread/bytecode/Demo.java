@@ -7,6 +7,10 @@ package com.forezp.thread.bytecode;
  **/
 public class Demo {
 
+    static {
+        System.out.println("静态代码块");
+    }
+
     public static void main(String[] args){
         System.out.println("Hello World!");
     }

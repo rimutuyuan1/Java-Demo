@@ -1,4 +1,4 @@
-package com.forezp.thread.classlaoder;
+package com.forezp.thread.classinitialization;
 
 /**
  * @Author 王鑫涛
@@ -9,11 +9,13 @@ public class Book {
 
     public static void main(String[] args) {
         System.out.println("Hello World.");
+        System.out.println("------------");
+        Book b = new Book();
+        b.print();
     }
 
     Book() {
         System.out.println("构造方法");
-        System.out.println("price=" + price +",amount=" + amount);
     }
 
     {
@@ -26,6 +28,8 @@ public class Book {
         System.out.println("静态代码块");
     }
 
-    static int amount = 112;
+    private void print() {
+        System.out.println("price=" + price);
+    }
 
 }
