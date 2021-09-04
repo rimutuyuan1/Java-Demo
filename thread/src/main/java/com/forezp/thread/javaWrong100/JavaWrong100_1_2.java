@@ -2,6 +2,7 @@ package com.forezp.thread.javaWrong100;
 
 
 import com.forezp.thread.atomicAndOther.LongAdder;
+import com.google.common.collect.Maps;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,6 +32,6 @@ public class JavaWrong100_1_2 {
         }));
         forkJoinPool.shutdown();
         forkJoinPool.awaitTermination(1, TimeUnit.HOURS);
-        return concurrentHashMap.entrySet().stream().collect(Collectors.toMap());
+        return Maps.newHashMap();
     }
 }
