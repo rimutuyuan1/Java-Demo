@@ -18,7 +18,7 @@ public class SocketTest {
     private static final Logger logger = LoggerFactory.getLogger(SocketTest.class);
     private static final ExecutorService EXECUTOR_SERVICE = new ThreadPoolExecutor(
             10, 10, 5,
-            TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
+            TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8080);
