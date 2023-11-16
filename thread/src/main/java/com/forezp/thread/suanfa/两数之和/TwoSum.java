@@ -1,4 +1,4 @@
-package com.forezp.thread.suanfa.twoSum;
+package com.forezp.thread.suanfa.两数之和;
 
 import java.util.Arrays;
 import java.util.HashMap;
