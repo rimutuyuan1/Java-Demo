@@ -1,4 +1,4 @@
-package com.forezp.thread.suanfa;
+package com.forezp.thread.suanfa.两数相加;
 
 import com.forezp.thread.suanfa.bean.ListNode;
 

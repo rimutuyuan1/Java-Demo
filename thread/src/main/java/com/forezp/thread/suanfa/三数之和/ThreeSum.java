@@ -1,4 +1,4 @@
-package com.forezp.thread.suanfa.threeSum;
+package com.forezp.thread.suanfa.三数之和;
 
 import java.util.ArrayList;
 import java.util.Arrays;
